@@ -54,9 +54,9 @@ THorse
 
 ```delphi
 THorseXMLDoc.New
-  .DOMVendor(TDOMVendorType.MsXML)
-  .ContentTypeXML(['application/xhtml+xml'])
-  .Encoding('utf-8')
+  .DOMVendor(...)
+  .ContentTypeXML([...])
+  .Encoding(...)
   .Intercept();
 ```
 * `DOMVendor`: Identificação do motor de processsamento do XML. [Verificar](https://github.com/antoniojmsjr/Horse-XMLDoc/blob/main/XML.md)
