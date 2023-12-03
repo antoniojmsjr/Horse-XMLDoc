@@ -46,6 +46,10 @@ THorse
        .ContentTypeXML(['application/xhtml+xml'])
        .Encoding('utf-8')
        .Intercept());
+OU
+
+THorse
+  .Use(THorseXMLDoc.New.Intercept);
 ```
 
 ```delphi
