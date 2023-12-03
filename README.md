@@ -60,7 +60,7 @@ THorseXMLDoc.New
   .Intercept();
 ```
 * `DOMVendor`: Identificação do motor de processsamento do XML. [Verificar](https://github.com/antoniojmsjr/Horse-XMLDoc/blob/main/XML.md)
-  * Default: TDOMVendorType.MsXML (Ambiente Microsoft Windows)
+  * Default: TDOMVendorType.MsXML (Ambiente Microsoft Windows) / TDOMVendorType.OmniXML (Ambiente Cross-platform)
 * `ContentTypeXML`: Identificação do [MIMETypes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) que serão interceptados pelo middleware.
   * Default: application/xml e text/xml
 * `Encoding`: Identificação do Encoding do documento XML.
