@@ -45,7 +45,7 @@ THorse
        .DOMVendor(TDOMVendorType.MsXML)
        .ContentTypeXML(['application/xhtml+xml'])
        .Encoding('utf-8')
-       .Intercept());
+       .Intercept);
 OU
 
 THorse
@@ -57,7 +57,7 @@ THorseXMLDoc.New
   .DOMVendor(...)
   .ContentTypeXML([...])
   .Encoding(...)
-  .Intercept();
+  .Intercept;
 ```
 * `DOMVendor`: Identificação do motor de processsamento do XML. [Verificar](https://github.com/antoniojmsjr/Horse-XMLDoc/blob/main/XML.md)
   * Default: TDOMVendorType.MsXML (Ambiente Microsoft Windows) / TDOMVendorType.OmniXML (Ambiente Cross-platform)
