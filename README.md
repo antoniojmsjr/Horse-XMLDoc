@@ -65,4 +65,4 @@ THorseXMLDoc.New
   * Default: application/xml e text/xml
 * `Encoding`: Identificação do Encoding do documento XML.
   * Default: utf-8
-* `Intercept`: Função responsável pelo interceptação e trtatamentos das requisições com XML.
+* `Intercept`: Função responsável pela interceptação e trtatamentos das requisições com XML.
