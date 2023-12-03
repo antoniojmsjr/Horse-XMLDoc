@@ -46,7 +46,7 @@ A classe **TXMLDocument** da unit [Xml.XMLDoc](https://docwiki.embarcadero.com/L
 
 #### Motores de tratamento do XML
 
-Hoje no Delphi existe 3 motores de tratamento do XML, internamente são conhecido como [DOMVendor](https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Using_the_Document_Object_Model)
+Hoje no Delphi existe 3 motores de tratamento do XML, internamente são conhecidos como [DOMVendor](https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Using_the_Document_Object_Model)
 
 | DOMVendor | Unit | Sistema Operacional | Biblioteca |
 |---|---|---|---|
