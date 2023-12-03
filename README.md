@@ -51,3 +51,38 @@ Nota: Como a grande maioria do código que usa o DOM gira em torno da manipulaç
 
 <img loading="lazy" src="https://github.com/antoniojmsjr/Horse-XMLDoc/assets/20980984/c17e7c16-f4d5-4501-b247-8685ae927817" width="450" height="450"/>
 
+## ⭕ XML com Delphi
+
+O Delphi disponibiliza nativamente uma classe de tratamento de XML, para qualquer tipo de manipulação do XML;
+
+A classe **TXMLDocument** da unit [Xml.XMLDoc](https://docwiki.embarcadero.com/Libraries/Alexandria/en/Xml.XMLDoc) que faz todo o tratamento do documento XML.
+
+#### Motores de tratamento do XML
+
+Hoje no Delphi existe 3 motores de tratamento do XML, internamente são conhecido como [DOMVendor](https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Using_the_Document_Object_Model)
+
+| DOMVendor | Unit | Sistema Operacional | Biblioteca |
+|---|---|---|---|
+|**MSXML**|[Xml.Win.msxmldom](https://docwiki.embarcadero.com/Libraries/Alexandria/en/Xml.Win.msxmldom)| Microsot Windows |msxml5.dll/msxml6.dll|
+|**OmniXML**|Xml.omnixmldom| Cross-platform |[omnixml](https://code.google.com/archive/p/omnixml/)|
+|**ADOM**|Xml.adomxmldom| Cross-platform |[adom](https://www.philo.de/xml/downloads.shtml)|
+
+## ⚙️ Instalação Automatizada
+
+Utilizando o [**Boss**](https://github.com/HashLoad/boss/releases/latest) (Dependency manager for Delphi) é possível instalar a biblioteca de forma automática.
+
+```
+boss install github.com/antoniojmsjr/Horse-XMLDoc
+```
+
+## ⚙️ Instalação Manual
+
+Se você optar por instalar manualmente, basta adicionar as seguintes pastas ao seu projeto, em *Project > Options > Delphi Compiler > Target > All Configurations > Search path*
+
+```
+..\Horse-XMLDoc\Source
+```
+
+## ⚡️ Uso
+
+#### Uso e definição do middleware
