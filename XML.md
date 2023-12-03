@@ -36,7 +36,7 @@ Observações
 
 Nota: Como a grande maioria do código que usa o DOM gira em torno da manipulação de documentos XML, é comum sempre se referir aos nós no DOM como elementos, pois em um documento XML, cada nó é um elemento.
 
-<img loading="lazy" src="https://github.com/antoniojmsjr/Horse-XMLDoc/assets/20980984/c17e7c16-f4d5-4501-b247-8685ae927817" width="450" height="450"/>
+<img loading="lazy" src="https://github.com/antoniojmsjr/Horse-XMLDoc/assets/20980984/c17e7c16-f4d5-4501-b247-8685ae927817" width="600" height="600"/>
 
 ## ⭕ XML com Delphi
 
