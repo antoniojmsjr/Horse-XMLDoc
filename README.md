@@ -36,3 +36,29 @@ Se você optar por instalar manualmente, basta adicionar as seguintes pastas ao 
 ## ⚡️ Uso
 
 #### Uso e definição do middleware
+
+```delphi
+uses Horse, Horse.XMLDoc, Xml.XMLDoc;
+
+THorse
+  .Use(THorseXMLDoc.New
+       .DOMVendor(TDOMVendorType.MsXML)
+       .ContentTypeXML(['application/xhtml+xml'])
+       .Encoding('utf-8')
+       .Intercept());
+```
+
+```delphi
+THorseXMLDoc.New
+  .DOMVendor(TDOMVendorType.MsXML)
+  .ContentTypeXML(['application/xhtml+xml'])
+  .Encoding('utf-8')
+  .Intercept();
+```
+* `DOMVendor`: Identificação do motor de processsamento do XML. [Verificar](https://github.com/antoniojmsjr/Horse-XMLDoc/blob/main/XML.md)
+  * Default: TDOMVendorType.MsXML (Ambiente Microsoft Windows)
+* `ContentTypeXML`: Identificação do [MIMETypes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) que serão interceptados pelo middleware.
+  * Default: application/xml e text/xml
+* `Encoding`: Identificação do Encoding do documento XML.
+  * Default: utf-8
+* `Intercept`: Função responsável pelo interceptação e trtatamentos das requisições com XML.
