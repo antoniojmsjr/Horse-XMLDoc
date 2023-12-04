@@ -15,7 +15,7 @@
 
 O **XML(eXtensible Markup Language)** é uma linguagem de marcação como o HTML, utilizada para **estruturar**, **armazenar** e **transportar dados** e que pudesse ser lido por software, e integrar-se com as demais linguagens.
 
-[Continuar...](https://github.com/antoniojmsjr/Horse-XMLDoc/blob/main/XML.md)
+[Continue lendo...](https://github.com/antoniojmsjr/Horse-XMLDoc/blob/main/XML.md)
 
 ## ⚙️ Instalação Automatizada
 
