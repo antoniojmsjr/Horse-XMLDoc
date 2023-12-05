@@ -66,3 +66,26 @@ THorseXMLDoc.New
 * `Encoding`: Identificação do Encoding do documento XML.
   * Default: utf-8
 * `Intercept`: Função responsável pela interceptação e tratatamento das requisições com XML.
+
+#### Exemplo
+
+```delphi
+uses Horse, Horse.XMLDoc, Xml.XMLDoc;
+
+THorse
+  .Use(THorseXMLDoc.New.Intercept);
+
+THorse.Get('ping',
+  procedure(Req: THorseRequest; Res: THorseResponse)
+  var
+    lBodyXML: TXMLDocument;
+  begin
+  
+    lBodyXML := Req.Body<TXMLDocument>;
+  
+    Res.Send<TXMLDocument>(lBodyXML);
+  
+  end);
+```
+
+
