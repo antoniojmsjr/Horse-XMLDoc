@@ -133,5 +133,5 @@ begin
   //    <pubdate>
   lNodeBook.ChildNodes.Add(lNodeElement);
 
-  ShowMessage(lXMLDocInft.XML.Text);
+  ShowMessage(lXMLDocInft.DocumentElement.XML);
 ```
