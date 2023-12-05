@@ -40,7 +40,7 @@ Nota: É comum sempre se referir aos nós(nodes) no DOM como elementos, pois em 
 
 ## ⭕ XML com Delphi
 
-O Delphi disponibiliza nativamente uma classe de tratamento de XML, para qualquer tipo de manipulação do XML;
+O Delphi disponibiliza nativamente uma classe de tratamento de XML para qualquer tipo de manipulação;
 
 A classe **TXMLDocument** da unit [Xml.XMLDoc](https://docwiki.embarcadero.com/Libraries/Alexandria/en/Xml.XMLDoc) que faz todo o tratamento do documento XML.
 
