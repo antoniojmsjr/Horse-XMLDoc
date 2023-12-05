@@ -53,3 +53,85 @@ Hoje no Delphi existe 3 motores de tratamento do XML, internamente são conhecid
 |**MSXML**|[Xml.Win.msxmldom](https://docwiki.embarcadero.com/Libraries/Alexandria/en/Xml.Win.msxmldom)| Microsot Windows |msxml5.dll/msxml6.dll|
 |**OmniXML**|Xml.omnixmldom| Cross-platform |[omnixml](https://code.google.com/archive/p/omnixml/)|
 |**ADOM**|Xml.adomxmldom| Cross-platform |[adom](https://www.philo.de/xml/downloads.shtml)|
+
+#### Exemplo de implementação
+
+```delphi
+uses Xml.xmldom, Xml.XMLIntf, Xml.XMLDoc, Xml.Win.msxmldom;
+```
+**XML de Exemplo**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+  <book>
+    <author>Carson</author>
+    <price format="dollar">31.95</price>
+    <pubdate>05/01/2001<pubdate>
+  <book>
+</books>
+```
+
+```delphi
+var
+  lXMLDoc: TXMLDocument;
+  lXMLDocInft: IXMLDocument;
+  lNodeBooks: IXMLNode;
+  lNodeBook: IXMLNode;
+  lNodeElement: IXMLNode;
+  lNodeAttribute: IXMLNode;
+begin
+  lXMLDoc := TXMLDocument.Create(nil);
+  lXMLDoc.DOMVendor := GetDOMVendor(SMSXML);
+  lXMLDoc.Options := lXMLDoc.Options + [doNodeAutoIndent];
+  lXMLDoc.Active := True;
+  lXMLDoc.Version := '1.0';
+  lXMLDoc.Encoding := 'utf-8';
+
+  lXMLDocInft := lXMLDoc;
+
+  //<books> - CRIA O NÓ RAIZ = lXMLDocInft.DocumentElement
+  lNodeBooks := lXMLDocInft.AddChild('books');
+
+  //<book>
+  lNodeBook := lXMLDocInft.CreateNode('book', ntElement);
+
+  //<books>
+  //  <book>
+  lNodeBooks.ChildNodes.Add(lNodeBook);
+
+  //<author>
+  lNodeElement := lXMLDocInft.CreateNode('author', ntElement);
+  lNodeElement.Text := 'Carson';
+
+  //<books>
+  //  <book>
+  //    <author>
+  lNodeBook.ChildNodes.Add(lNodeElement);
+
+  //<price>
+  lNodeElement := lXMLDocInft.CreateNode('price', ntElement);
+  lNodeElement.Text := '31.95';
+
+  //<price format="dollar">
+  lNodeAttribute := lXMLDocInft.CreateNode('format', ntAttribute);
+  lNodeAttribute.Text := 'dollar';
+
+  lNodeElement.AttributeNodes.Add(lNodeAttribute);
+
+  //<books>
+  //  <book>
+  //    <price format="dollar">
+  lNodeBook.ChildNodes.Add(lNodeElement);
+
+  //<pubdate>
+  lNodeElement := lXMLDocInft.CreateNode('pubdate', ntElement);
+  lNodeElement.Text := '05/01/2001';
+
+  //<books>
+  //  <book>
+  //    <pubdate>
+  lNodeBook.ChildNodes.Add(lNodeElement);
+
+  ShowMessage(lXMLDocInft.XML.Text);
+```
