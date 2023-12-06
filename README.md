@@ -101,4 +101,78 @@ begin
 end;
 ```
 
+```delphi
+uses Horse, Horse.XMLDoc, Xml.XMLDoc;
 
+THorse
+  .Use(THorseXMLDoc.New.Intercept);
+
+THorse.Get('ping',
+  procedure(Req: THorseRequest; Res: THorseResponse)
+  var
+    lXMLDoc: TXMLDocument;
+    lNodeBooks: IXMLNode;
+    lNodeBook: IXMLNode;
+    lNodeElement: IXMLNode;
+    lNodeAttribute: IXMLNode;
+  begin
+    CoInitialize(nil); // Obrigatório quando DOMVendor = SMSXML
+    try
+      lXMLDoc := TXMLDocument.Create(XMLContainer); // Free pelo middleware Horse-XMLDoc depois do "Send".
+      lXMLDoc.DOMVendor := GetDOMVendor(SMSXML);
+      lXMLDoc.Active := True;
+      lXMLDoc.Version := '1.0';
+      lXMLDoc.Encoding := 'utf-8';
+
+      //<books> - CRIA O NÓ RAIZ = lXMLDocInft.DocumentElement
+      lNodeBooks := lXMLDoc.AddChild('books');
+
+      //<book>
+      lNodeBook := lXMLDoc.CreateNode('book', ntElement);
+
+      //<books>
+      //  <book>
+      lNodeBooks.ChildNodes.Add(lNodeBook);
+
+      //<author>
+      lNodeElement := lXMLDoc.CreateNode('author', ntElement);
+      lNodeElement.Text := 'Carson';
+
+      //<books>
+      //  <book>
+      //    <author>
+      lNodeBook.ChildNodes.Add(lNodeElement);
+
+      //<price>
+      lNodeElement := lXMLDoc.CreateNode('price', ntElement);
+      lNodeElement.Text := '31.95';
+
+      //<price format="dollar">
+      lNodeAttribute := lXMLDoc.CreateNode('format', ntAttribute);
+      lNodeAttribute.Text := 'dollar';
+
+      lNodeElement.AttributeNodes.Add(lNodeAttribute);
+
+      //<books>
+      //  <book>
+      //    <price format="dollar">
+      lNodeBook.ChildNodes.Add(lNodeElement);
+
+      //<pubdate>
+      lNodeElement := lXMLDoc.CreateNode('pubdate', ntElement);
+      lNodeElement.Text := '05/01/2001';
+
+      //<books>
+      //  <book>
+      //    <pubdate>
+      lNodeBook.ChildNodes.Add(lNodeElement);
+
+      pResponse.Send<TXMLDocument>(lXMLDoc);
+    finally
+      CoUninitialize;
+    end;
+  end);
+```
+
+## ⚠️ Licença
+`Horse-XMLDoc` is free and open-source software licensed under the [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/antoniojmsjr/Horse-XMLDoc/blob/master/LICENSE)
