@@ -101,6 +101,16 @@ begin
 end;
 ```
 
+```xml
+<books>
+	<book>
+		<author>Carson</author>
+		<price format="dollar">31.95</price>
+		<pubdate>05/01/2001</pubdate>
+	</book>
+</books>
+```
+
 ```delphi
 uses Horse, Horse.XMLDoc, Xml.XMLDoc, Xml.Win.msxmldom;
 
