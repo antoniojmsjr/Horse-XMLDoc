@@ -75,7 +75,7 @@ uses Horse, Horse.XMLDoc, Xml.XMLDoc;
 THorse
   .Use(THorseXMLDoc.New.Intercept);
 
-THorse.Get('ping',
+THorse.Post('ping',
   procedure(Req: THorseRequest; Res: THorseResponse)
   var
     lBodyXML: TXMLDocument;
