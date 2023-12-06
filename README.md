@@ -70,7 +70,7 @@ THorseXMLDoc.New
 #### Exemplo
 
 ```delphi
-uses Horse, Horse.XMLDoc;
+uses Horse, Horse.XMLDoc, Xml.XMLDoc;
 
 THorse
   .Use(THorseXMLDoc.New.Intercept);
@@ -102,7 +102,7 @@ end;
 ```
 
 ```delphi
-uses Horse, Horse.XMLDoc, Xml.XMLDoc;
+uses Horse, Horse.XMLDoc, Xml.XMLDoc, Xml.Win.msxmldom;
 
 THorse
   .Use(THorseXMLDoc.New.Intercept);
