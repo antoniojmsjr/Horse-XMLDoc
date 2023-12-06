@@ -80,12 +80,26 @@ THorse.Get('ping',
   var
     lBodyXML: TXMLDocument;
   begin
-  
+    //Parse usando middleware Horse-XMLDoc
     lBodyXML := Req.Body<TXMLDocument>;
   
-    Res.Send<TXMLDocument>(lBodyXML);
-  
+    Res.Send<TXMLDocument>(lBodyXML);  
   end);
+```
+
+#### Exemplo com manipulação
+
+**ATENÇÃO:** Para manipular o XML utilizando o middleware Horse-XMLDoc com o componente **TXMLDocument** é necessário cria a variável com um **container**, internamente o componente TXMLDocument utilia interface para manipular o XML, e não informando um container a interface é eliminada pelo ARC do Delphi gerando alguns erros, como, "No active document", "Invalid pointer operation" ou até mesmo o travamento do aplicativo.
+
+```delphi
+var
+  lXMLDoc: TXMLDocument;
+
+  lXMLDoc: TXMLDocument
+
+  lXMLDoc := TXMLDocument.Create(XMLContainer); // Container da unit Horse.XMLDoc
+
+  .....
 ```
 
 
