@@ -102,7 +102,7 @@ end;
 ```
 
 ```delphi
-uses Horse, Horse.XMLDoc, Xml.XMLDoc;
+uses Horse, Horse.XMLDoc, Xml.XMLDoc, Xml.Win.msxmldom;
 
 THorse
   .Use(THorseXMLDoc.New.Intercept);
@@ -173,6 +173,10 @@ THorse.Get('ping',
     end;
   end);
 ```
+
+#### Exemplo compilado
+[Demo.zip](https://github.com/antoniojmsjr/Horse-XMLDoc/files/13575594/Demo.zip)
+
 
 ## ⚠️ Licença
 `Horse-XMLDoc` is free and open-source software licensed under the [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://github.com/antoniojmsjr/Horse-XMLDoc/blob/master/LICENSE)
