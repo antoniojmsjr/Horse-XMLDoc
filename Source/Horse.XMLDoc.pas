@@ -70,7 +70,12 @@ var
 implementation
 
 uses
-  System.SysUtils, Winapi.ActiveX, FMX.Forms;
+  System.SysUtils, Winapi.ActiveX,
+  {$IFDEF MSWINDOWS}
+  Vcl.Forms;
+  {$ELSE}
+  Fmx.Forms;
+  {$ENDIF}
 
 { THorseXMLDoc }
 
