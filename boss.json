@@ -1,0 +1,9 @@
+{
+	"name": "Horse-XMLDoc",
+	"description": "Horse-XMLDoc é um middleware de tratamento para requisições que contenham XML no body.",
+	"version": "1.0.0",
+	"homepage": "https://github.com/antoniojmsjr/Horse-XMLDoc",
+	"mainsrc": "Source",
+	"projects": [],
+	"dependencies": {}
+}
