@@ -134,7 +134,7 @@ THorse.Get('ping',
       lXMLDoc.Version := '1.0';
       lXMLDoc.Encoding := 'utf-8';
 
-      //<books> - CRIA O NÓ RAIZ = lXMLDocInft.DocumentElement
+      //<books> - CRIA O NÓ RAIZ = lXMLDoc.DocumentElement
       lNodeBooks := lXMLDoc.AddChild('books');
 
       //<book>
