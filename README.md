@@ -112,7 +112,7 @@ end;
 ```
 
 ```delphi
-uses Horse, Horse.XMLDoc, Xml.XMLDoc, Xml.Win.msxmldom, Xml.xmldom;
+uses Horse, Horse.XMLDoc, Xml.XMLDoc, Xml.Win.msxmldom, Xml.xmldom, Winapi.ActiveX;
 
 THorse
   .Use(THorseXMLDoc.New.Intercept);
