@@ -67,6 +67,11 @@ THorseXMLDoc.New
   * Default: utf-8
 * `Intercept`: Função responsável pela interceptação e tratatamento das requisições com XML.
 
+Os exemplos estão disponíveis na pasta do projeto:
+```
+..\Horse-XMLDoc\Samples
+```
+
 #### Exemplo
 
 ```delphi
