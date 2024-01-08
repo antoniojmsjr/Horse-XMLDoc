@@ -9,7 +9,7 @@
 
 # Horse-XMLDoc
 
-**Horse-XMLDoc** é um middleware de tratamento para requisições que contenham XML no body, desenvolvido parar o framework [Horse](https://github.com/HashLoad/horse).
+**Horse-XMLDoc** é um middleware para tratamento de XML em APIs desenvolvidas com o framework [Horse](https://github.com/HashLoad/horse).
 
 ## ❓ O que é um XML?
 
