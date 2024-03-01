@@ -14,7 +14,7 @@ A grande vantagem do XML é facilitar o compartilhamento de dados. Seu armazenam
 
 #### Estrututa
 
-XML é um formato para a criação de documentos com dados organizados de forma hierárquica.
+XML é um formato para criação de documentos com dados organizados de forma hierárquica.
 
 * Declaração/cabeçalho XML: Deve sempre ser incluida pois define a versão e o encoding do XML do documento;
 * Elemento raiz: Sempre deve existir um elemento raiz em um documento XML;
