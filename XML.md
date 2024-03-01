@@ -4,7 +4,7 @@ O **XML(eXtensible Markup Language)** é uma linguagem de marcação como o HTML
 
 A grande vantagem do XML é facilitar o compartilhamento de dados. Seu armazenamento é feito em texto, permitindo que a leitura seja feita por diferentes aplicativos.
 
-#### Principios
+#### Princípios
 
 * Separação entre contéudo e formatação;</br>
   * Contéudo: Informação/Dados.</br>
