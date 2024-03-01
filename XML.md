@@ -6,9 +6,9 @@ A grande vantagem do XML é facilitar o compartilhamento de dados. Seu armazenam
 
 #### Principios
 
-* Separação entre contéudo e formatação;
-  Contéudo: Informação/Dados.
-  Formatação: Utiliza-se TAG's para delimitação dos dados.
+* Separação entre contéudo e formatação;</br>
+  * Contéudo: Informação/Dados.</br>
+  * Formatação: Utiliza-se TAG's para delimitação dos dados.
 * Simplicidade e legibilidade, tanto para humanos quanto para computadores;
 * Interoperabilidade entre sistemas;
 
