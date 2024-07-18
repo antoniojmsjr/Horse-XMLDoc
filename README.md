@@ -94,7 +94,8 @@ THorse.Post('ping',
 
 #### Exemplo com manipulação
 
-**ATENÇÃO:** Para manipular o XML utilizando o middleware Horse-XMLDoc com o componente **TXMLDocument** é necessário instanciar a variável do componente TXMLDocument passando um **container** no create. Internamente o componente TXMLDocument utiliza interface para manipular o XML, e não informando um container a interface é eliminada pelo ARC do Delphi gerando alguns erros aleatórios, como, "No active document", "Invalid pointer operation" ou até mesmo o travamento do aplicativo.
+> [!WARNING]\
+Para manipular o XML utilizando o middleware Horse-XMLDoc com o componente **TXMLDocument** é necessário instanciar a variável do componente TXMLDocument passando um **container** no create. Internamente o componente TXMLDocument utiliza interface para manipular o XML, e não informando um container a interface é eliminada pelo ARC do Delphi gerando alguns erros aleatórios, como, "No active document", "Invalid pointer operation" ou até mesmo o travamento do aplicativo.
 
 ```delphi
 var
